@@ -1,8 +1,16 @@
-# PC-TEST-FRONT
-React list loader with Redux
+# PC-TEST-FRONTEND
 
-Don't forget to create .env.local file:
-    
+React list loader with Redux, NodeJS (Express), MySQL
+
+Don't forget to create .env.local file for frontend:
+
     REACT_APP_API_URL=http://your_api_url.com
+
+And for backend process.env:
+
+    DB_HOST=string
+    DB_USER=string
+    DB_PASSWORD=string
+    DB_DATABASE=string
 
 Backend: https://github.com/franckboudraa/pc-test-back
