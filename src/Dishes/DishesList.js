@@ -76,10 +76,28 @@ class DishesList extends PureComponent {
                     Title
                   </Table.HeaderCell>
                   <Table.HeaderCell
+                    sorted={column === 'is_hot' ? direction : null}
+                    onClick={this.handleSort('is_hot')}
+                  >
+                    Type
+                  </Table.HeaderCell>
+                  <Table.HeaderCell
                     sorted={column === 'rating' ? direction : null}
                     onClick={this.handleSort('rating')}
                   >
                     Rating
+                  </Table.HeaderCell>
+                  <Table.HeaderCell
+                    sorted={column === 'price' ? direction : null}
+                    onClick={this.handleSort('price')}
+                  >
+                    Price
+                  </Table.HeaderCell>
+                  <Table.HeaderCell
+                    sorted={column === 'is_available' ? direction : null}
+                    onClick={this.handleSort('is_available')}
+                  >
+                    Availability
                   </Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
