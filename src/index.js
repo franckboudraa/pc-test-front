@@ -8,6 +8,7 @@ import reducers from './reducers/rootReducer';
 
 import App from './App';
 import 'semantic-ui-css/semantic.min.css';
+import './assets/main.css';
 
 import registerServiceWorker from './registerServiceWorker';
 

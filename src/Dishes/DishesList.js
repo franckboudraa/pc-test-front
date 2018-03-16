@@ -20,9 +20,6 @@ class DishesList extends PureComponent {
 
   componentDidMount() {
     this.props.fetchDishes();
-    /*this.setState({
-      data: this.props.dishes.dishes
-    });*/
   }
 
   componentWillReceiveProps(nextProps) {
@@ -70,16 +67,22 @@ class DishesList extends PureComponent {
                     id
                   </Table.HeaderCell>
                   <Table.HeaderCell
+                    sorted={column === 'is_hot' ? direction : null}
+                    onClick={this.handleSort('is_hot')}
+                  >
+                    Type
+                  </Table.HeaderCell>
+                  <Table.HeaderCell
                     sorted={column === 'title' ? direction : null}
                     onClick={this.handleSort('title')}
                   >
                     Title
                   </Table.HeaderCell>
                   <Table.HeaderCell
-                    sorted={column === 'is_hot' ? direction : null}
-                    onClick={this.handleSort('is_hot')}
+                    sorted={column === 'description' ? direction : null}
+                    onClick={this.handleSort('description')}
                   >
-                    Type
+                    Description
                   </Table.HeaderCell>
                   <Table.HeaderCell
                     sorted={column === 'rating' ? direction : null}

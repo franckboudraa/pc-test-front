@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { Icon, Label, Rating, Table } from 'semantic-ui-react';
 
 const DishesItem = props => {
@@ -18,6 +19,7 @@ const DishesItem = props => {
         )}
       </Table.Cell>
       <Table.Cell>{props.title}</Table.Cell>
+      <Table.Cell>{_.truncate(props.description)}</Table.Cell>
       <Table.Cell>
         <Rating
           icon="star"
@@ -33,7 +35,7 @@ const DishesItem = props => {
       </Table.Cell>
       <Table.Cell>
         {props.is_available ? (
-          <Label color="green">Available</Label>
+          <Label className="pc-green">Available</Label>
         ) : (
           <Label color="red">Not available</Label>
         )}

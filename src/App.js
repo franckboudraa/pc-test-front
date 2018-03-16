@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Menu } from 'semantic-ui-react';
+import { Container, Image, Menu } from 'semantic-ui-react';
 
 import Dishes from './Dishes';
 
@@ -9,7 +9,7 @@ class App extends Component {
       <Container>
         <Menu stackable widths={1}>
           <Menu.Item>
-            <h1>popchef</h1>
+            <Image src="https://eatpopchef.com/assets/images/logo-green.svg" />
           </Menu.Item>
         </Menu>
         <Dishes />
